@@ -7,3 +7,7 @@
     color: theme('colors.neutral');
   }
 }
+
+p {
+  font-size: large;
+}
