@@ -1,4 +1,4 @@
-import { PiListLight } from 'react-icons/pi';
+import { PiListLight, PiXLight } from 'react-icons/pi';
 
 type NavItemData = {
   id: string;
@@ -16,10 +16,11 @@ export const Header = () => {
   return (
     <div className="navbar bg-base-100">
       <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <PiListLight className="text-3xl" />
-          </div>
+        <details className="dropdown [&_.swap-on]:opacity-100 [&_.swap-off]:opacity-0 [&[open]_.swap-off]:opacity-100 [&[open]_.swap-on]:opacity-0">
+          <summary className="btn btn-ghost swap lg:hidden">
+            <PiListLight className="swap-on fill-current text-3xl" />
+            <PiXLight className="swap-off fill-current text-3xl" />
+          </summary>
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
@@ -43,7 +44,7 @@ export const Header = () => {
               );
             })}
           </ul>
-        </div>
+        </details>
         <a className="btn btn-ghost text-xl">AIAA</a>
       </div>
       <div className="navbar-center hidden lg:flex">
