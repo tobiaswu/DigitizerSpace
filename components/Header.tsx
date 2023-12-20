@@ -8,9 +8,13 @@ type NavItemData = {
 
 export const Header = () => {
   const navItems: NavItemData[] = [
-    { id: 'item-1', label: 'Solutions', items: ['Paperless Office'] },
-    { id: 'item-2', label: 'Resources', items: ['Blog', 'Newsletter'] },
-    { id: 'item-3', label: 'About' },
+    {
+      id: 'tab-1',
+      label: 'Solutions',
+      items: ['Consulting', 'Paperless Office'],
+    },
+    { id: 'tab-2', label: 'Resources', items: ['Blog', 'Newsletter'] },
+    { id: 'tab-3', label: 'About' },
   ];
 
   return (
@@ -45,7 +49,7 @@ export const Header = () => {
             })}
           </ul>
         </details>
-        <a className="btn btn-ghost text-xl">AIAA</a>
+        <a className="btn text-xl">AIAA</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -74,7 +78,7 @@ export const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Contact</a>
+        <a className="btn btn-ghost">Contact</a>
       </div>
     </div>
   );

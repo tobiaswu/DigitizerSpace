@@ -1,10 +1,19 @@
+import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
+import { LottieAnimation } from '@/components/LottieAnimation';
+import { PartnerCard } from '@/components/PartnerCard';
+import { ReviewCard } from '@/components/ReviewCard';
+import { UseCaseCard } from '@/components/UseCaseCard';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
-  PiChecksLight,
+  PiAlienLight,
   PiFactoryLight,
+  PiFileCloudLight,
   PiFilesLight,
+  PiFlowArrowLight,
   PiPiggyBankLight,
+  PiRepeatLight,
   PiRobotLight,
   PiRocketLaunchLight,
   PiSmileyLight,
@@ -12,15 +21,14 @@ import {
 
 export default function Home() {
   return (
-    <div className="bg-base-100">
-      <div className="hero min-h-screen">
+    <div className="container mx-auto">
+      <div className="hero min-h-screen relative">
         <div className="hero-content text-center flex flex-col">
           <div className="max-w-6xl">
-            <h1 className="text-4xl sm:text-6xl font-bold leading-normal">
+            <h1 className="text-4xl sm:text-6xl font-bold leading-relaxed">
               Scale and Digitalize your Business with Intelligent Automations
             </h1>
           </div>
-
           <h2 className="text-2xl sm:text-4xl font-semibold mt-16 mb-8">
             Discover how you can
           </h2>
@@ -42,43 +50,32 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className="-z-10 w-full opacity-30 absolute">
+          <LottieAnimation src="/animations/matrix.lottie" />
+        </div>
       </div>
 
-      <section>{/* TODO: add animation */}</section>
-      <section className="flex flex-col items-center mt-16 lg:mt-8 xl:mt-0">
-        <p className="text-center mb-12">We are proud to partner with</p>
-        <div className="carousel carousel-center flex gap-32 max-w-3xl items-center">
-          <div className="carousel-item">
-            <Image
-              style={{ filter: 'grayscale()', width: 'auto' }}
-              src="/images/CF_logo.webp"
-              alt="Chris Feith Logo"
-              width={80}
-              height={80}
-            />
-          </div>
-          <div className="carousel-item">
-            <Image
-              style={{ filter: 'grayscale()', width: 'auto' }}
-              src="/images/IMS_logo.webp"
-              alt="Immoselfmade Logo"
-              width={80}
-              height={80}
-            />
-          </div>
-          <div className="carousel-item">
-            <Image
-              style={{ filter: 'grayscale()', width: 'auto' }}
-              src="/images/ADP_logo.webp"
-              alt="Aldeas de Paz Logo"
-              width={80}
-              height={80}
+      <section className="grid gap-4 items-center grid-cols-2 bg-base-100 px-4">
+        <div className="order-2 md:order-1 col-span-2 md:col-span-1 flex flex-col items-center">
+          <p className="text-xl mb-16 md:mt-16 xl:mt-0">
+            We are proud to partner with
+          </p>
+          <div className="grid order-2 grid-cols-2 gap-4">
+            <PartnerCard src="/images/CF_logo.webp" alt="Chris Feith Logo" />
+            <PartnerCard src="/images/IMS_logo.webp" alt="Immoselfmade Logo" />
+            <PartnerCard src="/images/ADP_logo.webp" alt="Aldeas de Paz Logo" />
+            <PartnerCard
+              src="/images/WV_logo.webp"
+              alt="Wupperfeld Ventures Logo"
             />
           </div>
         </div>
+        <div className="order-1 md:order-2 col-span-2 md:col-span-1">
+          <LottieAnimation src="/animations/automation.lottie" />
+        </div>
       </section>
 
-      <section className="m-auto mt-32 max-w-7xl p-4">
+      <section className="py-16 sm:py-32 px-4 bg-base-100">
         <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
           Have you ever wondered how you can benefit from the wave of new
           technology like artificial intelligence?
@@ -86,11 +83,10 @@ export default function Home() {
         <div className="grid grid-cols-3 gap-12">
           <div
             className="tooltip tooltip-neutral col-span-3 lg:col-span-1 place-self-center"
-            data-tip="Prompt: Imagine a mystical figure, with a striking resemblance to Dumbledore, wearing sunglasses, illuminated by a sea of neon green lights as he casts a spell with his wand, creating a stunning visual display, a dark background."
+            data-tip="Prompt: Imagine a mystical figure, with a striking resemblance to Dumbledore, wearing sunglasses, illuminated by a sea of neon green lights as he casts a spell with his wand, creating a stunning visual display."
           >
             <Image
-              style={{ height: 'auto' }}
-              className="rounded-lg border-4 border-transparent hover:border-primary"
+              className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
               src="/images/ai-magician.webp"
               alt="Ai generated image of a magician"
               width={400}
@@ -98,7 +94,7 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col col-span-3 lg:col-span-2">
-            <h3 className="text-2xl sm:text-3xl leading-relaxed font-semibold mb-4">
+            <h3 className="text-2xl sm:text-3xl leading-relaxed font-semibold mb-8">
               And how you can implement it in your business to make your life
               dramatically easier?
             </h3>
@@ -111,29 +107,119 @@ export default function Home() {
               This is why we build this portal. To bundle our continuous
               research and reveal real world use cases
             </p>
-            <div className="flex gap-4 items-center mb-4">
-              <div className="bg-neutral rounded-lg w-14 h-14 flex items-center justify-center">
-                <PiChecksLight className="text-3xl text-primary" />
-              </div>
-              <p className="w-fit">
-                stay up-to-date with the latest trends and tools
-              </p>
-            </div>
-            <div className="flex gap-4 items-center mb-4">
-              <div className="bg-neutral rounded-lg w-14 h-14 flex items-center justify-center">
-                <PiChecksLight className="text-3xl text-primary" />
-              </div>
-              <p className="w-fit">identify use cases for your business</p>
-            </div>
-            <div className="flex gap-4 items-center">
-              <div className="bg-neutral rounded-lg w-14 h-14 flex items-center justify-center">
-                <PiChecksLight className="text-3xl text-primary" />
-              </div>
-              <p className="w-fit">stay up to date with trends and tools</p>
+            <div className="flex flex-col gap-4">
+              <CheckedText description="stay up to date with trends and tools" />
+              <CheckedText description="identify use cases for your business" />
+              <CheckedText description="implement solutions and boost your business" />
             </div>
           </div>
         </div>
       </section>
+
+      <section className="py-16 sm:py-32 px-4 bg-base-100">
+        <h2 className="text-3xl sm:text-5xl leading-relaxed font-semibold text-center mb-12">
+          Learn based on our business use cases
+        </h2>
+        <p className="mb-12 text-center max-w-xl mx-auto leading-relaxed">
+          We are a team of AI geeks, software engineers and entrepreneurs. We
+          continuously browse the web and test the newest tools. We then combine
+          this with our business mindset to create the solutions you&apos;ll
+          find here.
+        </p>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <UseCaseCard
+            icon={<PiRepeatLight />}
+            title="Automations"
+            description="Connect various apps with each other via APIs and safe tons of time"
+          />
+          <UseCaseCard
+            icon={<PiFlowArrowLight />}
+            title="Workflows"
+            description="Create systematic approaches to your daily tasks, easy to follow routines for your employees"
+          />
+          <UseCaseCard
+            icon={<PiFileCloudLight />}
+            title="Digitization"
+            description="Get rid of pen and paper, make every information accessible to all your team"
+          />
+          <UseCaseCard
+            icon={<PiAlienLight />}
+            title="AI Generation"
+            description="Build in chat bots generating the content you need, generate images and videos"
+          />
+        </div>
+      </section>
+
+      <section>{/* TODO: Add blog preview */}</section>
+
+      <section className="py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
+        <div className="flex flex-col col-span-2 lg:col-span-1">
+          <h2 className="text-3xl sm:text-4xl leading-relaxed font-semibold mb-12">
+            We seamlessly build and launch automation solutions
+          </h2>
+          <CheckedText description="In case you need an automation hand take a look at our tailored services" />
+          <Link className="w-fit mt-8" href="/">
+            <button className="btn btn-primary">Solutions</button>
+          </Link>
+        </div>
+        <div
+          className="tooltip tooltip-neutral col-span-2 lg:col-span-1 place-self-center"
+          data-tip="Prompt: Hagrid from Harry Potter, full body from a distance in a dynamic position in a mystical forest, wearing sunglasses, surrounded by neon green lighting. He casts a spell that creates an army of small robots behind him, inspired by transformers."
+        >
+          <Image
+            className="h-auto rounded-lg border-4 border-transparent hover:border-primary"
+            src="/images/ai-hagrid-robots.webp"
+            alt="Ai generated image of Hagrid casting robots"
+            width={600}
+            height={400}
+          />
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-32 px-4 bg-base-100 grid grid-cols-2 gap-12">
+        <div className="flex flex-col col-span-2 lg:col-span-1">
+          <h2 className="text-3xl sm:text-4xl leading-relaxed font-semibold mb-12">
+            Hear from our clients
+          </h2>
+          <p className="leading-relaxed">
+            How our clients have transformed their business with us,
+            digitalized, automated and so on.
+          </p>
+          <Link className="w-fit mt-8" href="/">
+            <button className="btn btn-primary">About us</button>
+          </Link>
+        </div>
+        <div className="col-span-2 lg:col-span-1">
+          <div className="grid sm:grid-cols-2 gap-4">
+            <ReviewCard
+              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
+              avatarURL="/images/placeholder.webp"
+              name="Michael Baylor"
+              position="Chief Technology Officer"
+            />
+            <ReviewCard
+              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
+              avatarURL="/images/placeholder.webp"
+              name="Michael Baylor"
+              position="Chief Technology Officer"
+            />
+            <ReviewCard
+              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
+              avatarURL="/images/placeholder.webp"
+              name="Michael Baylor"
+              position="Chief Technology Officer"
+            />
+            <ReviewCard
+              description="That is the best way to do it. So awesome. I can 100% recommend these guys. Helped me a lot in my business. Paperless is a game changer."
+              avatarURL="/images/placeholder.webp"
+              name="Michael Baylor"
+              position="Chief Technology Officer"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>{/* TODO: Add newsletter signup */}</section>
     </div>
   );
 }
