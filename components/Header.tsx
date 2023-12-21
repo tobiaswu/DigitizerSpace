@@ -1,20 +1,49 @@
+import { RouteId } from '@/utils';
+import Link from 'next/link';
 import { PiListLight, PiXLight } from 'react-icons/pi';
 
 type NavItemData = {
   id: string;
   label: string;
-  items?: string[];
+  url?: string;
+  items?: NavItemData[];
 };
 
 export const Header = () => {
   const navItems: NavItemData[] = [
     {
-      id: 'tab-1',
+      id: 'solutions',
       label: 'Solutions',
-      items: ['Consulting', 'Paperless Office'],
+      items: [
+        {
+          id: 'solution-1',
+          label: 'Consultation',
+          url: RouteId.consultation,
+        },
+        {
+          id: 'solution-2',
+          label: 'Paperless Office',
+          url: RouteId.paperless,
+        },
+      ],
     },
-    { id: 'tab-2', label: 'Resources', items: ['Blog', 'Newsletter'] },
-    { id: 'tab-3', label: 'About' },
+    {
+      id: 'resources',
+      label: 'Resources',
+      items: [
+        {
+          id: 'resource-1',
+          label: 'Blog',
+          url: RouteId.blog,
+        },
+        {
+          id: 'resource-2',
+          label: 'Newsletter',
+          url: '/#newsletter',
+        },
+      ],
+    },
+    { id: 'about', label: 'About', url: RouteId.about },
   ];
 
   return (
@@ -27,18 +56,20 @@ export const Header = () => {
           </summary>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-neutral rounded-lg w-52"
           >
-            {navItems.map((navItem) => {
+            {navItems.map((tab) => {
               return (
-                <li key={navItem.id}>
-                  <a>{navItem.label}</a>
-                  {navItem.items && (
+                <li key={tab.id}>
+                  <p>{tab.label}</p>
+                  {tab.items && (
                     <ul className="p-2">
-                      {navItem.items.map((item, index) => {
+                      {tab.items.map((item) => {
                         return (
-                          <li key={index}>
-                            <a>{item}</a>
+                          <li key={item.id}>
+                            <Link href={item.url ?? RouteId.root}>
+                              {item.label}
+                            </Link>
                           </li>
                         );
                       })}
@@ -49,36 +80,41 @@ export const Header = () => {
             })}
           </ul>
         </details>
-        <a className="btn text-xl">AIAA</a>
+        <Link href={RouteId.root}>
+          <button className="btn text-xl">AIAA</button>
+        </Link>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {navItems.map((navItem) => {
-            return (
-              <li key={navItem.id}>
-                {navItem.items ? (
-                  <details>
-                    <summary>{navItem.label}</summary>
-                    <ul className="p-2">
-                      {navItem.items.map((item, index) => {
-                        return (
-                          <li key={index}>
-                            <a>{item}</a>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </details>
-                ) : (
-                  <a>{navItem.label}</a>
-                )}
-              </li>
-            );
-          })}
-        </ul>
+      <div className="navbar-center hidden lg:flex gap-8">
+        {navItems.map((navItem) => {
+          return navItem.items ? (
+            <div key={navItem.id} className="dropdown drowdown-hover">
+              <div tabIndex={0} role="button" className="btn btn-ghost m-1">
+                {navItem.label}
+              </div>
+              <ul
+                tabIndex={0}
+                className="p-2 z-[1] dropdown-content menu shadow bg-neutral rounded-lg w-52"
+              >
+                {navItem.items.map((item) => {
+                  return (
+                    <li key={item.id}>
+                      <Link href={item.url ?? RouteId.root}>{item.label}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ) : (
+            <Link key={navItem.id} href={navItem.url ?? RouteId.root}>
+              <button className="btn btn-ghost">{navItem.label}</button>
+            </Link>
+          );
+        })}
       </div>
       <div className="navbar-end">
-        <a className="btn btn-ghost">Contact</a>
+        <Link href={RouteId.contact}>
+          <button className="btn btn-neutral">Contact</button>
+        </Link>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { CheckedText } from '@/components/CheckedText';
 import { DiscoverCard } from '@/components/DiscoverCard';
+import { EmailSignup } from '@/components/EmailSignup';
 import { LottieAnimation } from '@/components/LottieAnimation';
 import { PartnerCard } from '@/components/PartnerCard';
 import { ReviewCard } from '@/components/ReviewCard';
@@ -13,6 +14,7 @@ import {
   PiFilesLight,
   PiFlowArrowLight,
   PiPiggyBankLight,
+  PiPlusSquareFill,
   PiRepeatLight,
   PiRobotLight,
   PiRocketLaunchLight,
@@ -219,7 +221,33 @@ export default function Home() {
         </div>
       </section>
 
-      <section>{/* TODO: Add newsletter signup */}</section>
+      <section id="newsletter" className="py-16 sm:py-32 px-4 bg-base-100">
+        <div className="grid grid-cols-3 gap-20 xl:gap-40 bg-secondary rounded-lg p-8 sm:p-12">
+          <div className="col-span-3 md:col-span-2">
+            <h2 className="text-3xl sm:text-4xl leading-relaxed font-semibold mb-8">
+              Be the first to receive our industry specific trends
+            </h2>
+            <p className="leading-relaxed mb-8">
+              Our goal is to help small and medium sized businesses to profit
+              from the current wave of technology in the automation space and to
+              make use of artificial intelligence
+            </p>
+            <div className="flex flex-col gap-4 mb-8">
+              <CheckedText description="Never miss news, trends and special offers" />
+              <CheckedText description="Bonus: get our guide for free" />
+            </div>
+            <EmailSignup />
+          </div>
+          <div className="col-span-3 md:col-span-1 place-self-center">
+            <div className="rounded-lg border-primary border-2 shadow-xl bg-neutral px-8 py-32 relative">
+              <p className="uppercase text-center font-bold">
+                10 must have automation tools and how to use them
+              </p>
+              <PiPlusSquareFill className="text-5xl text-primary absolute -top-8 -left-8" />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
