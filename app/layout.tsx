@@ -9,8 +9,9 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AIAA',
-  description: 'Automation & Digitization Hub',
+  title: 'DigitizerSpace - Automation & Digitization Solutions',
+  description:
+    'DigitizerSpace helps your business scale and digitalize through intelligent automations',
 };
 
 export default function RootLayout({

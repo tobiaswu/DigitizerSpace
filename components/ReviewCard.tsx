@@ -14,7 +14,7 @@ export const ReviewCard = ({
   position,
 }: ReviewCardProps) => {
   return (
-    <div className="flex flex-col bg-neutral rounded-lg shadow-xl p-4">
+    <div className="flex flex-col bg-neutral rounded-lg shadow-md p-4">
       <p className="text-base mb-4">{description}</p>
       <div className="flex items-center">
         <Image
@@ -25,7 +25,7 @@ export const ReviewCard = ({
           height={40}
         />
         <div className="flex flex-col">
-          <p className="font-bold text-white">{name}</p>
+          <p className="font-bold">{name}</p>
           <p className="text-sm">{position}</p>
         </div>
       </div>

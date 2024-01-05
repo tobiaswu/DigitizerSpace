@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="482.79962mm"
+   height="355.1109mm"
+   viewBox="0 0 482.79962 355.1109"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter3"
+       x="-0.39646614"
+       y="-0.47320149"
+       width="1.7929323"
+       height="1.946403">
+      <feGaussianBlur
+         stdDeviation="11.937377"
+         id="feGaussianBlur3" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter3-0"
+       x="-0.39646614"
+       y="-0.47320149"
+       width="1.7929323"
+       height="1.946403">
+      <feGaussianBlur
+         stdDeviation="11.937377"
+         id="feGaussianBlur3-4" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter3-3"
+       x="-0.39646614"
+       y="-0.47320149"
+       width="1.7929323"
+       height="1.946403">
+      <feGaussianBlur
+         stdDeviation="11.937377"
+         id="feGaussianBlur3-8" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter3-3-5"
+       x="-0.39646614"
+       y="-0.47320149"
+       width="1.7929323"
+       height="1.946403">
+      <feGaussianBlur
+         stdDeviation="11.937377"
+         id="feGaussianBlur3-8-3" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter4"
+       x="-1.2963404"
+       y="-0.54562387"
+       width="3.5926808"
+       height="2.0912477">
+      <feGaussianBlur
+         stdDeviation="37.185982"
+         id="feGaussianBlur4" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter4-9"
+       x="-1.2963405"
+       y="-0.54562388"
+       width="3.5926811"
+       height="2.0912478">
+      <feGaussianBlur
+         stdDeviation="37.185982"
+         id="feGaussianBlur4-7" />
+    </filter>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(118.54203,24.307603)">
+    <path
+       style="opacity:0.7;mix-blend-mode:normal;fill:#4059ad;fill-opacity:1;stroke-width:0.264583;filter:url(#filter3)"
+       d="M 6.8356585,99.117048 49.314393,41.013951 79.098335,101.55836 Z"
+       id="path3"
+       transform="matrix(2.1305653,0,0,1.8286583,-20.746101,-20.010962)" />
+    <path
+       style="opacity:0.7;mix-blend-mode:normal;fill:#cc3f0c;fill-opacity:1;stroke-width:0.264583;filter:url(#filter3-3)"
+       d="M 6.8356585,99.117048 49.314393,41.013951 79.098335,101.55836 Z"
+       id="path3-0"
+       transform="matrix(2.1305653,0,0,1.8286583,-32.407885,41.58634)" />
+    <path
+       style="opacity:0.7;mix-blend-mode:normal;fill:#cc3f0c;fill-opacity:1;stroke-width:0.264583;filter:url(#filter3-3-5)"
+       d="M 6.8356585,99.117048 49.314393,41.013951 79.098335,101.55836 Z"
+       id="path3-0-4"
+       transform="matrix(2.1305653,0,0,1.8286583,53.425146,-17.660437)" />
+    <path
+       style="opacity:0.7;mix-blend-mode:normal;fill:#4059ad;fill-opacity:1;stroke-width:0.264583;filter:url(#filter3-0)"
+       d="M 6.8356585,99.117048 49.314393,41.013951 79.098335,101.55836 Z"
+       id="path3-4"
+       transform="matrix(2.1305653,0,0,1.8286583,50.624431,36.120643)" />
+    <path
+       style="opacity:0.7;mix-blend-mode:normal;fill:#55d44c;fill-opacity:1;stroke-width:0.264583;filter:url(#filter4)"
+       d="M 39.549168,65.915278 9.7652265,228.5063 -29.29568,224.60021 -27.830896,64.938757 Z"
+       id="path4" />
+    <path
+       style="opacity:0.7;fill:#55d44c;fill-opacity:1;stroke-width:0.264583;filter:url(#filter4-9)"
+       d="m 275.0112,78.965911 -29.78394,162.591019 -39.0609,-3.90609 1.46478,-159.66145 z"
+       id="path4-7" />
+  </g>
+</svg>

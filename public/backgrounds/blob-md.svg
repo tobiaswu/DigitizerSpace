@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="333.7821mm"
+   height="248.82475mm"
+   viewBox="0 0 333.7821 248.82475"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1"
+       x="-0.38054687"
+       y="-0.51395696"
+       width="1.7610937"
+       height="2.0279139">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="21.569866"
+         id="feGaussianBlur1" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter3"
+       x="-0.48779435"
+       y="-0.38677183"
+       width="1.9755887"
+       height="1.7735437">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="13.297886"
+         id="feGaussianBlur3" />
+    </filter>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(61.82575,10.953439)">
+    <path
+       style="opacity:0.7;fill:#55d44c;fill-opacity:1;stroke-width:0.264583;filter:url(#filter1)"
+       d="M 102.46038,63.097068 37.04782,163.82083 173.08278,162.08421 Z"
+       id="path1"
+       transform="matrix(1.3932532,0,0,1.2181819,-41.317259,-24.754696)" />
+    <path
+       style="opacity:0.7;fill:#cc3f0c;fill-opacity:1;stroke-width:0.264583;filter:url(#filter3)"
+       d="M 40.037429,149.89623 97.164003,78.121811 105.46444,85.933993 44.43178,160.63797 Z"
+       id="path3"
+       inkscape:export-filename="blob-green-xl.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

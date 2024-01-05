@@ -6,6 +6,10 @@
   .card:hover .icon {
     color: theme('colors.neutral');
   }
+
+  .next-link:hover .link-icon {
+    display: block;
+  }
 }
 
 p {
