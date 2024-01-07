@@ -1,4 +1,4 @@
-import { RouteId } from '@/utils';
+import { RouteId } from '@/utils/route';
 import Link from 'next/link';
 import { PiDotOutlineLight, PiTwitterLogoLight } from 'react-icons/pi';
 

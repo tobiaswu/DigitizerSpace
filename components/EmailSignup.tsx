@@ -1,6 +1,6 @@
 'use client';
 
-import { RouteId } from '@/utils';
+import { RouteId } from '@/utils/route';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { PiCheckCircleLight, PiWarningCircleLight } from 'react-icons/pi';

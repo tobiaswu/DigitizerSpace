@@ -1,3 +1,11 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy of DigitizerSpace - we care about your data',
+  description:
+    '▷ Your data is 100% safe with DigitizerSpace. Read about how we protect and use your data in our privacy policy. ✓ Anti spam promise. ✓ Aligned with GDPR/DSGVO.',
+};
+
 export default function Privacy() {
   return (
     <div className="container mx-auto py-8 px-4 bg-base-100">

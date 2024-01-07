@@ -1,7 +1,3 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import transitions from '@/public/transitions.json';
 import Image from 'next/image';
 import {
   PiCoinsThin,
@@ -12,7 +8,19 @@ import {
 } from 'react-icons/pi';
 import { StatCard } from '@/components/StatCard';
 import Link from 'next/link';
-import { RouteId } from '@/utils';
+import { RouteId } from '@/utils/route';
+import type { Metadata } from 'next';
+import { MotionWrapper } from '@/components/MotionWrapper';
+import {
+  itemAnimationVariant,
+  staggerAnimationVariant,
+} from '@/utils/animation';
+
+export const metadata: Metadata = {
+  title: 'About DigitizerSpace - The why, who, and what of automation!',
+  description:
+    '▷ About DigitizerSpace - the team behind the automation and digitization portal. ✓ Learn about what we do, why we do it and who started it. ✓ Work with us!',
+};
 
 export default function About() {
   return (
@@ -20,54 +28,50 @@ export default function About() {
       <section className="bg-blob-md bg-cover lg:bg-contain bg-top">
         <div className="hero">
           <div className="hero-content text-center flex flex-col">
-            <div className="max-w-6xl">
-              <motion.h1
-                variants={transitions.item}
-                initial="hidden"
-                whileInView="show"
-                className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8"
-              >
-                We build solutions for everyday business activities
-              </motion.h1>
-            </div>
-            <motion.p
-              variants={transitions.item}
-              initial="hidden"
-              whileInView="show"
-              className="mt-8 max-w-xl mx-auto leading-relaxed"
+            <MotionWrapper
+              className="max-w-6xl"
+              variants={itemAnimationVariant}
             >
-              We are a group of tech-savvy individuals who run our own
-              businesses in various industries. We are passionate about solving
-              everyday problems with innovative solutions and automating as much
-              as possible. By freeing up our time, we can focus on what we are
-              most passionate about.
-            </motion.p>
+              <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8">
+                We build solutions for everyday business activities
+              </h1>
+            </MotionWrapper>
+            <MotionWrapper variants={itemAnimationVariant}>
+              <p className="mt-8 max-w-xl mx-auto leading-relaxed">
+                We are a group of tech-savvy individuals who run our own
+                businesses in various industries. We are passionate about
+                solving everyday problems with innovative solutions and
+                automating as much as possible. By freeing up our time, we can
+                focus on what we are most passionate about.
+              </p>
+            </MotionWrapper>
           </div>
         </div>
 
-        <motion.div
-          variants={transitions.fadeIn}
-          initial="hidden"
-          whileInView="show"
-          className="py-16"
-        >
+        <div className="py-16">
           <div className="container mx-auto flex flex-col gap-8 px-4 items-center">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              <StatCard
-                icon={<PiLightningLight />}
-                title="Founded"
-                value="2023"
-              />
-              <StatCard
-                icon={<PiCoinsThin />}
-                title="Average cost saved"
-                value="$3000/m"
-              />
-              <StatCard
-                icon={<PiTimerLight />}
-                title="Average time saved"
-                value="140h/m"
-              />
+              <MotionWrapper index={0} variants={staggerAnimationVariant}>
+                <StatCard
+                  icon={<PiLightningLight />}
+                  title="Founded"
+                  value="2023"
+                />
+              </MotionWrapper>
+              <MotionWrapper index={1} variants={staggerAnimationVariant}>
+                <StatCard
+                  icon={<PiCoinsThin />}
+                  title="Average cost saved"
+                  value="$3000/m"
+                />
+              </MotionWrapper>
+              <MotionWrapper index={2} variants={staggerAnimationVariant}>
+                <StatCard
+                  icon={<PiTimerLight />}
+                  title="Average time saved"
+                  value="140h/m"
+                />
+              </MotionWrapper>
             </div>
             <Image
               className="rounded-lg max-w-3xl w-full mt-16"
@@ -78,7 +82,7 @@ export default function About() {
               loading="lazy"
             />
           </div>
-        </motion.div>
+        </div>
       </section>
 
       <section className="container mx-auto max-w-2xl px-4">
@@ -156,9 +160,9 @@ export default function About() {
           >
             80% of Fortune 500 companies use OpenAI products?
           </Link>
-          These companies have long understood the potential of AI and have been
-          using it to their advantage. With the increasing demand for AI,
-          it&apos;s only a matter of time until smaller businesses start
+          &nbsp;These companies have long understood the potential of AI and
+          have been using it to their advantage. With the increasing demand for
+          AI, it&apos;s only a matter of time until smaller businesses start
           adopting it too.
         </p>
         <h2 className="mt-16 mb-8 text-4xl font-semibold">Final words</h2>

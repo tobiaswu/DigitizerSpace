@@ -1,4 +1,4 @@
-import { RouteId } from '@/utils';
+import { RouteId } from '@/utils/route';
 import Image from 'next/image';
 import Link from 'next/link';
 

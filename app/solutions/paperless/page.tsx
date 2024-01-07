@@ -1,7 +1,3 @@
-'use client';
-
-import { motion } from 'framer-motion';
-import transitions from '@/public/transitions.json';
 import { CheckedText } from '@/components/CheckedText';
 import Image from 'next/image';
 import {
@@ -26,34 +22,38 @@ import {
 import { SolutionCard } from '@/components/SolutionCard';
 import { PricingCard } from '@/components/PricingCard';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { MotionWrapper } from '@/components/MotionWrapper';
+import {
+  itemAnimationVariant,
+  staggerAnimationVariant,
+} from '@/utils/animation';
+
+export const metadata: Metadata = {
+  title: 'Get the Paperless-ngx system running | we install it for you',
+  description:
+    '▷ Eliminate pen & paper and make your documents available for your team. Get started with paperless-ngx today! ✓ 100% satisfaction guarantee ✓ full support.',
+};
 
 export default function Paperless() {
   return (
     <>
       <div className="hero bg-blob-soft bg-cover lg:bg-contain bg-top">
         <div className="hero-content text-center flex flex-col">
-          <div className="max-w-6xl">
-            <motion.h1
-              variants={transitions.item}
-              initial="hidden"
-              whileInView="show"
-              className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8"
-            >
+          <MotionWrapper className="max-w-6xl" variants={itemAnimationVariant}>
+            <h1 className="text-4xl sm:text-6xl font-bold sm:leading-relaxed sm:pt-8">
               Transform your physical documents into a searchable online archive
-            </motion.h1>
-          </div>
-          <motion.p
-            variants={transitions.item}
-            initial="hidden"
-            whileInView="show"
-            className="mt-8 mb-2 max-w-xl mx-auto leading-relaxed"
-          >
-            Paperless is an open-source community developed document managment
-            software that runs on the server. You can connect your scanner to it
-            or just drop files from your devices into the consumption of
-            Paperless. The software automatically sorts and names your documents
-            and make it fully searchable thanks to OCR.
-          </motion.p>
+            </h1>
+          </MotionWrapper>
+          <MotionWrapper variants={itemAnimationVariant}>
+            <p className="mt-8 mb-2 max-w-xl mx-auto leading-relaxed">
+              Paperless is an open-source community developed document managment
+              software that runs on the server. You can connect your scanner to
+              it or just drop files from your devices into the consumption of
+              Paperless. The software automatically sorts and names your
+              documents and make it fully searchable thanks to OCR.
+            </p>
+          </MotionWrapper>
           <Link href="#pricing">
             <button className="btn btn-secondary mb-16 capitalize">
               Get started now
@@ -67,16 +67,17 @@ export default function Paperless() {
               height={184}
               loading="lazy"
             />
-            <motion.div
-              variants={transitions.container}
-              initial="hidden"
-              whileInView="show"
-              className="flex flex-col gap-4"
-            >
-              <CheckedText description="Find the right documents at a blazingly speed and simplify collaborating with your team by digitalizing all your documents with Paperless." />
-              <CheckedText description="Never worry about your files. Everything is backed-up on your server." />
-              <CheckedText description="Forget about the repetitive task of manually naming and sorting documents. Automate from scan to document management saving tons of time." />
-            </motion.div>
+            <div className="flex flex-col gap-4">
+              <MotionWrapper index={0} variants={staggerAnimationVariant}>
+                <CheckedText description="Find the right documents at a blazingly speed and simplify collaborating with your team by digitalizing all your documents with Paperless." />
+              </MotionWrapper>
+              <MotionWrapper index={1} variants={staggerAnimationVariant}>
+                <CheckedText description="Never worry about your files. Everything is backed-up on your server." />
+              </MotionWrapper>
+              <MotionWrapper index={2} variants={staggerAnimationVariant}>
+                <CheckedText description="Forget about the repetitive task of manually naming and sorting documents. Automate from scan to document management saving tons of time." />
+              </MotionWrapper>
+            </div>
           </div>
         </div>
       </div>

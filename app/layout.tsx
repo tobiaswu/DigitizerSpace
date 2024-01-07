@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'DigitizerSpace - Automation & Digitization Solutions',
   description:
-    'DigitizerSpace helps your business scale and digitalize through intelligent automations',
+    '▷ Scale and digitalize your business with DigitizerSpace. Intelligent automations. ✓ Based on real use cases. ✓ Learn for free. ✓ Start implementing today.',
 };
 
 export default function RootLayout({
